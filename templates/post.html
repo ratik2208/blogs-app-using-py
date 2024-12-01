@@ -1,0 +1,89 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/1bc39c2d09.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            padding: 7px 15px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        a:hover {
+            color: black;
+        }
+        
+        .col {
+            padding: 15px 7px;
+            margin: 4rem;
+            font-size: 1.3rem;
+        }
+        .card-title{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .card-text{
+            margin-top: 5%;
+        }
+        .post-details{
+            margin-left: 1%;
+        }
+        .row > .col > .date-time{
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+        }
+
+        
+    </style>
+    <title>Blogs</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <div class="date-time">
+                            <h6 class="card-subtitle text-muted">{{post.user}}</h6>
+                           <h6 class="card-subtitle text-muted post-details"> | </h6> 
+                            <h6 class="card-subtitle text-muted post-details">{{post.datetime}}</h6>    
+                        </div>
+                        <p class="card-text">{{post.body | safe}}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
